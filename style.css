@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    --primary-color: rgba(193, 225, 193, 0.6);    
+    --white:#ffffff;
+    --black:#000;
+    --black-transparent:rgba(0,0,0,0.6)
+}
+body{
+    font-family: 'Playfair Display', 'serif';
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+header{
+    position: relative;
+}
+.header .hero-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -3;
+}
+.header .hero-wrapper img{
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.top-socialbar{
+    background-color: var(--primary-color);
+}
+.socialbar-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.top-socialbar ul{
+    list-style-type: none;
+}
+.top-socialbar ul.top-contact{
+    font-weight:200 ;
+}
+.top-socialbar ul.right-social-list{
+    display: flex;
+}
+
+.top-socialbar ul.right-social-list li a:hover{
+    -webkit-transition: width 2s, -webkit-transform 2s;
+}
+
+.top-socialbar ul.right-social-list li a:hover{
+    color: var(--black);
+    display: inline-block;
+    -webkit-transform: rotateY(-360deg);
+}
+
+.top-socialbar ul li{
+    padding: 12px;
+}
+.top-socialbar ul li a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.main-navbar img{
+    width: 120px;
+    height: 120px;
+}
+
+.main-navbar{
+    background-color: var(--black-transparent);
+    padding: 12px 0;
+}
+.main-nav-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+.main-navbar ul li:last-child{
+    margin-right: 0;
+}
+.main-navbar ul li{
+    margin: 0 6px;
+}
+.main-navbar ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+    padding: 6px 12px;
+}
+.main-navbar ul li a:hover{
+    background-color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+.active{
+    background-color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+}
