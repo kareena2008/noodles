@@ -1,107 +1,155 @@
-*{
+* {
     padding: 0;
     margin: 0;
     --primary-color: rgba(193, 225, 193, 0.6);    
-    --white:#ffffff;
-    --black:#000;
-    --black-transparent:rgba(0,0,0,0.6)
+    --white: #ffffff;
+    --black: #000;
+    --black-transparent: rgba(0,0,0,0.6);
 }
-body{
-    font-family: 'Playfair Display', 'serif';
+
+@font-face {
+    font-family: "DancingScript";
+    src: url("Dancing-Script-400.ttf");
 }
-.container{
+
+
+.container {
     width: 1170px;
     margin: 0 auto;
 }
-header{
+
+.header-wrapper {
     position: relative;
 }
-.header .hero-wrapper{
+
+.header{
     position: absolute;
     width: 100%;
-    height: 100%;
     top: 0;
-    z-index: -3;
 }
-.header .hero-wrapper img{
+
+.hero-top-text {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+
+    text-align: center;
+}
+
+.hero-top-text h1 {
+    color: #000;
+    font-size: 96px;
+    font-family: "DancingScript", sans-serif; 
+}
+
+.hero-top-text a{
+    color: var(--black);
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 1s;
+}
+.hero-top-text a:hover{
+    color: var(--primary-color);
+    background-color: var(--white);
+}
+
+.hero-wrapper img {
     width: 100%;
-    max-width: 1920px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
 }
-.top-socialbar{
+
+.header .hero-wrapper img {
+    width: 100%;
+}
+
+.top-socialbar {
     background-color: var(--primary-color);
 }
-.socialbar-inner{
+
+.socialbar-inner {
     display: flex;
     justify-content: space-between;
 }
-.top-socialbar ul{
+
+.top-socialbar ul {
     list-style-type: none;
 }
-.top-socialbar ul.top-contact{
-    font-weight:200 ;
+
+.top-socialbar ul.top-contact {
+    font-weight: 300;
 }
-.top-socialbar ul.right-social-list{
+
+.top-socialbar ul.right-social-list {
     display: flex;
 }
 
-.top-socialbar ul.right-social-list li a:hover{
-    -webkit-transition: width 2s, -webkit-transform 2s;
-}
-
-.top-socialbar ul.right-social-list li a:hover{
+.top-socialbar ul.right-social-list li a:hover {
     color: var(--black);
     display: inline-block;
     -webkit-transform: rotateY(-360deg);
+    transition: width 2s, transform 2s;
 }
 
-.top-socialbar ul li{
+.top-socialbar ul li {
     padding: 12px;
 }
-.top-socialbar ul li a{
+
+.top-socialbar ul li a {
     color: var(--white);
     text-decoration: none;
 }
 
-.main-navbar img{
-    width: 120px;
+.main-navbar img {
+    width: 150px;
     height: 120px;
 }
 
-.main-navbar{
+.main-navbar {
     background-color: var(--black-transparent);
     padding: 12px 0;
 }
-.main-nav-inner{
+
+.main-nav-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.main-navbar ul{
+
+.main-navbar ul {
     display: flex;
     list-style-type: none;
 }
-.main-navbar ul li:last-child{
+
+.main-navbar ul li:last-child {
     margin-right: 0;
 }
-.main-navbar ul li{
+
+.main-navbar ul li {
     margin: 0 6px;
 }
-.main-navbar ul li a{
+
+.main-navbar ul li a {
     text-decoration: none;
     color: var(--white);
     font-weight: 700;
     padding: 6px 12px;
 }
-.main-navbar ul li a:hover{
+
+.main-navbar ul li a:hover {
     background-color: var(--primary-color);
     padding: 6px 12px;
     border-radius: 6px;
 }
-.active{
+
+.active {
     background-color: var(--primary-color);
     padding: 6px 12px;
     border-radius: 6px;
+}
+.lead-text{
+    text-align: center;
+    font-size: 36px;
 }
