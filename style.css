@@ -234,7 +234,7 @@
     width: 100%;
 }
 .best-offer-section .offer-inner img {
-    width: 60%; /* Increased from smaller sizes to make it bigger and more prominent */
+    width: 60%; 
     max-width: 700px; /* Optional: prevents it from getting too huge on large screens */
     height: auto;
     flex-shrink: 0;;
