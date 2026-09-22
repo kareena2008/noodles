@@ -4,7 +4,8 @@
     --primary-color: rgba(193, 225, 193, 0.6);    
     --white: #ffffff;
     --black: #000;
-    --black-transparent: rgba(0,0,0,0.6);
+    --black-transparent: rgba(0, 0, 0, 0.6);
+    --white-transparent: rgba(255, 255, 255, 0.6);
 }
 
 @font-face {
@@ -149,7 +150,136 @@
     padding: 6px 12px;
     border-radius: 6px;
 }
+
+
 .lead-text{
     text-align: center;
-    font-size: 36px;
+    font-size: 32px;
+}
+.lead-text h2{
+    position: relative;
+    display: inline-block;
+}
+.lead-text h2::after{
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: var(--primary-color);
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    left: -15px;
+}
+.lead-text h2::before{
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: var(--primary-color);
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    right: -45px;
+}
+
+.menu-inner-wrapper{
+    display: flex;
+}
+.menu-inner-wrapper .menu-card{
+    width: 25%;
+    position: relative;
+    margin: 0 10px;
+    overflow: hidden;
+}
+.menu-inner-wrapper .menu-card:hover{
+    transform: scale(1.05);
+    z-index: 10;
+}
+.menu-inner-wrapper .menu-card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+.menu-inner-wrapper .menu-card h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    width: 100%; 
+}
+.overlay {
+    position: absolute; /* Changed from relative to absolute */
+    inset: 0;           /* Shorthand for top:0, right:0, bottom:0, left:0 */
+    background-color: var(--black-transparent);
+}
+
+
+/* Controls the noodles image size and places it on the right */
+
+.best-offer-section{
+    padding: 50px 20px;
+}
+.best-offer-section .offer-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+.best-offer-section .offer-inner img {
+    width: 60%; /* Increased from smaller sizes to make it bigger and more prominent */
+    max-width: 700px; /* Optional: prevents it from getting too huge on large screens */
+    height: auto;
+    flex-shrink: 0;;
+}
+
+/* Controls the text block on the left */
+.best-offer-section .offer-inner .offer-detail {
+    flex: 1;
+    padding-left: 100px;
+    padding-right: 20px;
+}
+
+.best-offer-section .offer-inner .offer-detail h2 {
+    font-size: 70px;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.best-offer-section .offer-inner .offer-detail p {
+    font-size: 18px;
+    color: var(--black-transparent);
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+/* Style for your button link */
+.best-offer-section .offer-inner .offer-detail a {
+    display: inline-block;
+    color: var(--white);
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.menu-wrapper .menu-head{
+    margin-top: -52px;
+}
+.menu-wrapper .menu-head h2{
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 48px 0;
+    text-align: center;
+    font-size: 60px;
+
 }
